@@ -46,7 +46,7 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx github brew vagrant)
+plugins=(git macos github brew vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,3 +71,8 @@ function ipfor(){
 
 # AutoJump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# python
+alias python="python3"
+alias pip="python3 -m pip"
+
