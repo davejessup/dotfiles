@@ -76,3 +76,8 @@ function ipfor(){
 alias python="python3"
 alias pip="python3 -m pip"
 
+# Add Visual Studio Code (code)
+#export PATH=$PATH:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Postgres App
+#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
