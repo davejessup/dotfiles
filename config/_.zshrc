@@ -46,7 +46,7 @@ alias ohmyzsh="vi ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git macos github brew vagrant)
+plugins=(git autojump macos github brew vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -70,14 +70,23 @@ function ipfor(){
 }
 
 # AutoJump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+# [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+# [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # python
 alias python="python3"
 alias pip="python3 -m pip"
 
 # Add Visual Studio Code (code)
-#export PATH=$PATH:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH=$PATH:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Postgres App
-#export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+# export PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
+# auto suggest
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
